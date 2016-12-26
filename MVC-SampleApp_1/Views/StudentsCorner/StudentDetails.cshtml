@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVC_SampleApp_1.Models.Students>
+@{
+    ViewBag.Title = "StudentDetails";
+}
+
+<h2>StudentDetails:</h2>
+@foreach (var student in Model)
+{
+    <h4>@student.FirstName @student.LastName</h4>
+}
+
+
+
