@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MVC_SampleApp_1.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,6 +14,8 @@ namespace MVC_SampleApp_1
     {
         protected void Application_Start()
         {
+            //This will call the SchoolInitializer
+            Database.SetInitializer<SchoolContext>(new SchoolInitializer());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

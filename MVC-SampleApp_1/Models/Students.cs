@@ -7,8 +7,10 @@ namespace MVC_SampleApp_1.Models
 {
     public class Students
     {
-        public int StudentID { get; set; }
+        public int StudentsID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public DateTime EnrollmentDate { get; set; }
+        public ICollection<Enrollment> Enrollments { get; set; }
     }
 }
